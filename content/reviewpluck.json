@@ -1,0 +1,82 @@
+[
+ {
+  "slug": "export-amazon-reviews",
+  "title": "How to export Amazon reviews to CSV or Excel",
+  "seoTitle": "How to export Amazon reviews to CSV or Excel (step by step)",
+  "description": "Export every customer review of an Amazon product to a CSV, Excel (XLSX) or JSON file with the ReviewPluck Chrome extension, step by step.",
+  "type": "Guide",
+  "answer": "Install the ReviewPluck Chrome extension, sign in to Amazon on the marketplace you need, open the product page or paste its ASIN, start the extraction, then export the file. CSV is available on every plan; XLSX and JSON come with Pro. The free plan keeps the first 10 reviews per extraction, 3 extractions a month.",
+  "sources": [
+   ["ReviewPluck — official site", "https://reviewpluck.com/en/"],
+   ["ReviewPluck — pricing and plan limits", "https://reviewpluck.com/en/tarifs/"],
+   ["ReviewPluck on the Chrome Web Store", "https://chromewebstore.google.com/detail/reviewpluck/bjaoeenljkcnhdffjmffopimkpglkcme"]
+  ],
+  "sections": [
+   ["What you need before you start", "<ul><li><strong>Google Chrome</strong> (or a Chromium browser that installs Chrome Web Store extensions).</li><li><strong>A ReviewPluck account</strong>, even on the free plan. Sign-in is by e-mail code or Google.</li><li><strong>An Amazon customer account on the marketplace</strong> you extract from (amazon.com, amazon.co.uk, amazon.de…), signed in in the same browser. Amazon shows the full review list to signed-in customers.</li></ul><p>Copy-pasting reviews by hand works for a dozen. Past that, an extension that walks through the review pages for you saves hours and keeps one review per row.</p>"],
+   ["Step 1: install the extension", "<p>Open the <a href=\"https://chromewebstore.google.com/detail/reviewpluck/bjaoeenljkcnhdffjmffopimkpglkcme\">ReviewPluck listing on the Chrome Web Store</a> and click <em>Add to Chrome</em>. Pin it to the toolbar so the popup is one click away.</p>"],
+   ["Step 2: open the product", "<p>Go to the product page on any of the 24 supported Amazon marketplaces, or paste the product’s ASIN into the extension. ReviewPluck takes you to the product’s “All reviews” page.</p>"],
+   ["Step 3: start the extraction", "<p>Before you start, the extension shows a time estimate based on the number of reviews Amazon reports. Once it runs, you can close the popup and switch tabs: the extraction continues in the background.</p><p>If Amazon asks for a CAPTCHA or a sign-in, the extraction pauses. Complete the check on Amazon and click <em>Resume</em>: it picks up where it stopped, and the reviews already collected stay exportable.</p>"],
+   ["Step 4: export the file", "<p>Each extraction produces one file, even a partial one. CSV is included on every plan and opens in Excel, Google Sheets, Numbers or LibreOffice. Pro adds XLSX and JSON, filters (rating, period, verified purchase, images, variant, keyword) to export only a selection, and a history of every run per product.</p><div class=\"table-wrap\"><table><caption>Free and Pro, as published on 13 November 2026</caption><thead><tr><th scope=\"col\">Limit</th><th scope=\"col\">Free</th><th scope=\"col\">Pro</th></tr></thead><tbody><tr><th scope=\"row\">Reviews per extraction</th><td>First 10</td><td>Unlimited</td></tr><tr><th scope=\"row\">Extractions per month</th><td>3</td><td>Unlimited</td></tr><tr><th scope=\"row\">Formats</th><td>CSV</td><td>CSV, XLSX, JSON</td></tr><tr><th scope=\"row\">Filters and history</th><td>No</td><td>Yes</td></tr></tbody></table></div><p>Pro costs €4.99 a month, €47.88 a year or €99.99 once (prices including VAT), with a 7-day free trial on the monthly and yearly plans. Check the <a href=\"https://reviewpluck.com/en/tarifs/\">pricing page</a> for current terms.</p>"],
+   ["Why the file can have fewer reviews than Amazon shows", "<p>The number displayed on a product page counts ratings, and some reviews are not listed on the marketplace you are browsing. ReviewPluck collects every review the marketplace makes available and always shows how many were collected out of the reported total, so you know what you have.</p>"]
+  ]
+ },
+ {
+  "slug": "amazon-review-csv-columns",
+  "title": "Amazon review export: the CSV columns explained",
+  "description": "What each column of a ReviewPluck Amazon review export contains, and how to open the CSV cleanly in Excel or Google Sheets.",
+  "type": "Reference",
+  "answer": "A ReviewPluck CSV has one review per row and 11 columns: asin, review_id, note (rating), titre (title), texte (text), auteur (author), date, achat_verifie (verified purchase), variante (variant), url_avis (review link) and image_urls. Column names are fixed whatever the interface language, so imports and formulas keep working.",
+  "sources": [
+   ["ReviewPluck — export preview and features", "https://reviewpluck.com/en/#fonctions"],
+   ["Microsoft — Import or export text (.txt or .csv) files", "https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba"]
+  ],
+  "sections": [
+   ["The 11 columns", "<p>The header row keeps the same names in every language of the extension. They come from the original French version of the product.</p><div class=\"table-wrap\"><table><caption>Columns of the CSV export</caption><thead><tr><th scope=\"col\">Column</th><th scope=\"col\">Content</th></tr></thead><tbody><tr><th scope=\"row\"><code>asin</code></th><td>Amazon product identifier, the same on every row of an extraction</td></tr><tr><th scope=\"row\"><code>review_id</code></th><td>Amazon’s identifier of the review, useful to remove duplicates between two extractions</td></tr><tr><th scope=\"row\"><code>note</code></th><td>Star rating, 1 to 5</td></tr><tr><th scope=\"row\"><code>titre</code></th><td>Review title</td></tr><tr><th scope=\"row\"><code>texte</code></th><td>Full review text</td></tr><tr><th scope=\"row\"><code>auteur</code></th><td>Reviewer’s public name</td></tr><tr><th scope=\"row\"><code>date</code></th><td>Review date</td></tr><tr><th scope=\"row\"><code>achat_verifie</code></th><td>Whether Amazon marks it as a verified purchase</td></tr><tr><th scope=\"row\"><code>variante</code></th><td>Variant bought (size, colour…) when Amazon shows it</td></tr><tr><th scope=\"row\"><code>url_avis</code></th><td>Link to the review on Amazon</td></tr><tr><th scope=\"row\"><code>image_urls</code></th><td>Links to the photos attached to the review</td></tr></tbody></table></div>"],
+   ["Opening the CSV in Excel without broken accents", "<p>Double-clicking a CSV can mangle accents or put everything in one column, depending on your regional settings. Use <em>Data › From Text/CSV</em> in Excel, choose UTF-8 as the file origin and comma as the delimiter. In Google Sheets, <em>File › Import</em> detects both automatically. Pro users can export XLSX directly and skip the import step.</p>"],
+   ["Useful first formulas", "<ul><li>Average rating: <code>=AVERAGE(C:C)</code> on the <code>note</code> column.</li><li>Share of verified purchases: <code>=COUNTIF(H:H,TRUE)/COUNTA(H:H)</code>, adapting the value to what your file contains.</li><li>Reviews mentioning a word: <code>=COUNTIF(E:E,\"*battery*\")</code> on the <code>texte</code> column.</li><li>Ratings per month: a pivot table with <code>date</code> grouped by month in rows and the average of <code>note</code> in values.</li></ul>"]
+  ]
+ },
+ {
+  "slug": "analyze-amazon-reviews",
+  "title": "How to analyze a competitor’s Amazon reviews",
+  "description": "A practical method to turn hundreds of Amazon reviews into product decisions: export, filter low ratings, tag recurring themes and count them.",
+  "type": "Method",
+  "answer": "Export all reviews of the competing product, start with the 1 and 2-star ones, tag each with the problem it describes, count the tags, then compare with the 4 and 5-star reviews to see what customers value. The themes that keep coming back are your product brief and your listing’s selling points.",
+  "sources": [
+   ["ReviewPluck — use cases", "https://reviewpluck.com/en/"],
+   ["ReviewPluck on the Chrome Web Store", "https://chromewebstore.google.com/detail/reviewpluck/bjaoeenljkcnhdffjmffopimkpglkcme"]
+  ],
+  "items": ["Export every review", "Read the low ratings first", "Tag recurring problems", "Count and rank the tags", "Compare with the high ratings", "Turn it into decisions"],
+  "sections": [
+   ["1. Export every review", "<p>A sample of the first page is biased toward the reviews Amazon ranks as most helpful. Export the full list (see <a href=\"/reviewpluck/export-amazon-reviews/\">how to export Amazon reviews to CSV</a>) and keep one file per product and per marketplace: customers in Germany and in the US do not always complain about the same things.</p>"],
+   ["2. Read the low ratings first", "<p>Filter the <code>note</code> column on 1 and 2 stars. These reviews are shorter to read and richer in concrete defects. With ReviewPluck Pro you can filter before exporting, by rating, period, verified purchase, variant or keyword.</p>"],
+   ["3. Tag recurring problems", "<p>Add a <em>theme</em> column and give each review one or two short tags: <em>leaks</em>, <em>size runs small</em>, <em>battery</em>, <em>arrived damaged</em>. Keep the list of tags short; merge synonyms as you go. Separate product defects from delivery issues, which you do not control the same way.</p>"],
+   ["4. Count and rank the tags", "<p>A pivot table on the theme column gives the frequency of each problem. Add the <code>variante</code> column to see whether a defect concerns one size or colour only, and the <code>date</code> column to check whether it is recent or was fixed.</p>"],
+   ["5. Compare with the high ratings", "<p>Do the same on 4 and 5-star reviews: what do satisfied customers mention first? Those words are the benefits to put forward in your own title, bullet points and images.</p>"],
+   ["6. Turn it into decisions", "<ul><li><strong>Product</strong>: the top three defects become the specification of your version.</li><li><strong>Listing</strong>: answer the most frequent objection in the first bullet point.</li><li><strong>Support</strong>: anticipate the questions behind the complaints in your instructions or FAQ.</li></ul><p>Keep the files: a new extraction a few months later shows whether the competitor fixed the issue.</p>"]
+  ]
+ },
+ {
+  "slug": "questions-answers",
+  "title": "Exporting Amazon reviews: questions and answers",
+  "description": "Answers on exporting Amazon reviews with ReviewPluck: accounts needed, free limits, missing reviews, CAPTCHAs, marketplaces, formats and data storage.",
+  "type": "FAQ",
+  "answer": "ReviewPluck is a Chrome extension that collects the reviews of an Amazon product and exports them to CSV (all plans) or XLSX and JSON (Pro). It works on 24 Amazon marketplaces, runs in your browser and does not store the reviews on its servers.",
+  "sources": [
+   ["ReviewPluck — FAQ", "https://reviewpluck.com/en/#faq"],
+   ["ReviewPluck — pricing", "https://reviewpluck.com/en/tarifs/"],
+   ["ReviewPluck — privacy policy", "https://reviewpluck.com/en/confidentialite/"]
+  ],
+  "faq": [
+   ["Can I export Amazon reviews for free?", "Yes. The free plan exports the first 10 reviews of a product per extraction, 3 extractions a month, in CSV. Pro removes both limits and adds XLSX, JSON, filters and history."],
+   ["Which accounts do I need?", "A ReviewPluck account, even for the free plan, with sign-in by e-mail code or Google, and an Amazon customer account signed in on each marketplace you extract from."],
+   ["Why are there fewer reviews in my file than on Amazon?", "The figure shown by Amazon includes ratings without text and reviews the marketplace does not list. ReviewPluck collects every review the marketplace makes available and shows how many it collected out of the reported total."],
+   ["What happens if Amazon shows a CAPTCHA?", "The extraction pauses and what was already collected stays exportable. Complete the check on Amazon, click Resume, and the extraction continues from where it stopped."],
+   ["Which Amazon marketplaces are supported?", "24 marketplaces, including amazon.com, .co.uk, .de, .fr, .it, .es, .nl, .se, .pl, .ca, .com.mx and .co.jp. The extension interface is available in 14 languages."],
+   ["Are the exported reviews stored by ReviewPluck?", "No. The extraction runs in your browser and the history stays there. The ReviewPluck account is only used to check your plan."],
+   ["Can I put the reviews on my own store?", "The CSV contains rating, title, text, author, date, verified purchase, variant, link and photos, which most store import tools can map. Before republishing review text elsewhere, check Amazon’s Conditions of Use and your store platform’s rules on imported reviews."],
+   ["How do I cancel Pro?", "From the Account tab of the extension, at any time. Pro stays active until the end of the paid period. The 7-day trial on monthly and yearly plans is free if cancelled before it ends."]
+  ],
+  "sections": []
+ }
+]

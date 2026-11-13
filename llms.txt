@@ -1,9 +1,14 @@
 # Projets et ressources — TheGipsyjew
 
-> Index des dossiers de projets. Les pages Le Lutin sont promotionnelles et sourcées.
+> Index des dossiers de projets. Les pages Le Lutin et ReviewPluck sont promotionnelles et sourcées.
 
 ## Le Lutin
 - [Site officiel](https://le-lutin.com/) : application de listes de cadeaux et Secret Santa.
 - [Dossier de ressources](https://thegipsyjew.github.io/le-lutin/)
 - [Index texte du dossier](https://thegipsyjew.github.io/le-lutin/llms.txt)
+
+## ReviewPluck
+- [Site officiel](https://reviewpluck.com/en/) : extension Chrome d’export des avis Amazon en CSV, Excel ou JSON.
+- [Guides (anglais)](https://thegipsyjew.github.io/reviewpluck/)
+- [Index texte des guides](https://thegipsyjew.github.io/reviewpluck/llms.txt)
 

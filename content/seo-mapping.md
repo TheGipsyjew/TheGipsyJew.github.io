@@ -37,3 +37,9 @@ Les données des éditeurs sur leurs propres services sont distinguées de notre
 Search Console pour les impressions, clics et indexation du sous-domaine ; analyse séparée des clics sortants vers le site officiel si une mesure est ajoutée. Aucun analytics ni cookie ajouté ici. Évaluer la visibilité sur un ensemble stable de questions sans attribuer automatiquement une variation à ces pages.
 
 Plusieurs URL du même sous-domaine ne créent pas plusieurs domaines référents. Aucune hausse de DR, indexation ou citation IA n’est garantie. Le sous-domaine github.io n’hérite pas automatiquement de l’autorité de github.com.
+
+## ReviewPluck (13 novembre 2026)
+
+Pages en anglais, intentions retenues sans données DataForSEO (à réajuster quand la collecte sera faite) : « export amazon reviews (to csv / excel) », « amazon review export columns », « analyze amazon reviews / competitor reviews », questions pratiques sur les limites. Faits produit repris uniquement du site officiel et de la fiche Chrome Web Store, vérifiés le 13 novembre 2026 (limites gratuites, prix TTC en euros, 24 marketplaces, 11 colonnes CSV). Pas de comparatif nominatif de concurrents tant que leurs fiches n’ont pas été vérifiées.
+
+Les liens vers reviewpluck.com pointent vers l’URL canonique déclarée (`https://reviewpluck.com/en/`), sans UTM : le référent `thegipsyjew.github.io` suffit dans GA4 et évite des variantes d’URL dans les backlinks.
