@@ -14,11 +14,16 @@ Site : https://thegipsyjew.github.io/
 - `/le-lutin/questions-reponses/` : 18 questions pratiques et réponses sourcées.
 - `/le-lutin/methode/` : transparence éditoriale et méthode.
 
-Un futur projet pourra utiliser `/reviewpluck/`, avec son propre dossier et un lien depuis la racine. Aucun contenu ReviewPluck n’est publié actuellement.
+- `/reviewpluck/` : guides ReviewPluck, **en anglais** (marché principal de l’export d’avis Amazon), avec lien direct vers https://reviewpluck.com/en/.
+- `/reviewpluck/export-amazon-reviews/` : exporter les avis Amazon en CSV ou Excel, pas à pas.
+- `/reviewpluck/amazon-review-csv-columns/` : les 11 colonnes du CSV et l’ouverture dans Excel.
+- `/reviewpluck/analyze-amazon-reviews/` : méthode d’analyse des avis d’un concurrent.
+- `/reviewpluck/questions-answers/` : 8 questions pratiques.
+- `/reviewpluck/method/` : méthode éditoriale et sources.
 
 ## Modifier et générer
 
-Modifier les articles dans `content/le-lutin.json`, les gabarits et les pages de répertoire dans `scripts/build.py`, le style dans `assets/resources.css`.
+Modifier les articles dans `content/le-lutin.json` et `content/reviewpluck.json`, les gabarits et les pages de répertoire dans `scripts/build.py`, le style dans `assets/resources.css`.
 
 ```sh
 python scripts/build.py
@@ -27,7 +32,7 @@ python -m http.server 8765
 
 Aucune dépendance de compilation. Le HTML généré est versionné et consultable sans JavaScript. GitHub Pages publie la branche `main`, dossier `/ (root)`, avec `.nojekyll`.
 
-La date éditoriale est volontairement fixe dans le générateur : ne la changer qu’après une vraie révision et une nouvelle vérification des sources. Une modification de CSS n’est pas une actualisation éditoriale.
+Les dates éditoriales (`DATE` pour Le Lutin, `RP_DATE` pour ReviewPluck) sont volontairement fixes dans le générateur : ne la changer qu’après une vraie révision et une nouvelle vérification des sources. Une modification de CSS n’est pas une actualisation éditoriale.
 
 ## SEO et lecture par les assistants
 
